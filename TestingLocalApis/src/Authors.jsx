@@ -21,7 +21,7 @@ const Authors = () => {
     const authorData = 
       {
         "name": "Chimamanda Ngozi Adichie",
-        "picture": "/public/adichie.jpeg",
+        "picture": "/adichie.jpeg",
         "age": 46
       }
 
@@ -32,8 +32,8 @@ const Authors = () => {
         },
         body: JSON.stringify(authorData)
       })
-      const result = response.json()
-      console.log(result);
+      const result = await response.json()
+      setAuthors(prev=> [...prev, result])
       
     
   }
