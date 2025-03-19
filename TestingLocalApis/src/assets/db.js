@@ -1,40 +1,29 @@
-import rowling from "./rowling.jpeg"
-import adichie from "./adichie.jpeg"
-import stephen from "./Stephen_King.jpg"
-import margaret from "./Margaret-Atwood.webp"
-import george from "./George-RR-Martin.webp"
-
-
-
-
-
-
 export const authors = [
-    [
         {
           "name": "J.K. Rowling",
-          "picture": [rowling],
+          "picture": "/public/rowling.jpeg",
           "age": 58
         },
         {
           "name": "Stephen King",
-          "picture": [stephen],
+          "picture": "/public/Stephen_King.jpg",
           "age": 76
         },
         {
           "name": "Margaret Atwood",
-          "picture": [margaret],
+          "picture": "/public/Margaret-Atwood.webp",
           "age": 84
         },
         {
           "name": "George R.R. Martin",
-          "picture": [george],
+          "picture": "/public/George-RR-Martin.webp",
           "age": 75
         },
         {
           "name": "Chimamanda Ngozi Adichie",
-          "picture": [adichie],
+          "picture": "/public/adichie.jpeg",
           "age": 46
         }
       ]
-]
+
+      //exports = { authors }
