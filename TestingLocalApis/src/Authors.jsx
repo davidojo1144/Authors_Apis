@@ -44,7 +44,7 @@ const Authors = () => {
   return (
     <>
       <div className='container space-y-5 mb-10 mt-10 shadow-2xl p-5 rounded-xl'>
-      <button onClick={submitNewAuthor} className='bg-gray-600 w-40 h-10 rounded-full text-white hover:bg-gray-300 hover:text-black shadow-2xl '>Add New Author</button>
+      <button onClick={submitNewAuthor} className='bg-gray-600 w-40 h-10 rounded-full text-white hover:bg-gray-300 hover:text-black shadow-xl '>Add New Author</button>
       <h1 className='text-xl font-semibold'>AUTHORS</h1>
           {
             authors.map((author)=> (
