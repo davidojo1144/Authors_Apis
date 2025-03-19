@@ -20,16 +20,21 @@ const Authors = () => {
   const submitNewAuthor = async () => {
     const authorData = 
       {
-        "id" : 5,
         "name": "Chimamanda Ngozi Adichie",
         "picture": "/public/adichie.jpeg",
         "age": 46
       }
 
       const response = await fetch("http://localhost:5000/api/authors",{
-        method : 
+        method : 'POST',
+        headers : {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(authorData)
       })
-
+      const result = response.json()
+      console.log(result);
+      
     
   }
 
@@ -39,7 +44,7 @@ const Authors = () => {
   return (
     <>
       <div className='container space-y-5 mb-10 mt-10'>
-      <button className='bg-gray-600 w-40 h-10 rounded-full text-white hover:bg-gray-300 hover:text-black '>Add New Authors</button>
+      <button onClick={submitNewAuthor} className='bg-gray-600 w-40 h-10 rounded-full text-white hover:bg-gray-300 hover:text-black '>Add New Authors</button>
       <h1 className='text-xl font-semibold'>AUTHORS</h1>
           {
             authors.map((author)=> (
